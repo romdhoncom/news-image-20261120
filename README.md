@@ -2,31 +2,29 @@
 [![rank](https://make.fun/badge/news-image-20261120/romdhoncom/news-image-20261120/rank.svg)](https://make.fun/bounty/news-image-20261120)
 [![reward](https://make.fun/badge/news-image-20261120/romdhoncom/news-image-20261120/reward.svg)](https://make.fun/bounty/news-image-20261120)
 
-# One Day on Earth — Friday 20 November 2026
+# 20 November 2026 in one image
 
-A newspaper front page that sums up Friday 20 November 2026 in one image.
-`main.py` (pure Python 3 standard library, no network, no clock, no
-randomness) draws it in code — own raster, own 5x7 bitmap font, own PNG
-encoder — and writes `entry.png` (1024x1024) to `$MAKEFUN_OUTPUT_DIR`
-(default `/output`). Two runs produce byte-identical output.
+One dense front page summing up Friday 20 November 2026 in 36 stories: a masthead
+and headline strip, a stats strip, region tags, 13 lead stories with pictures drawn
+in code, a world map with numbered pins, a list of 23 more stories, a date-check
+strip naming the 19 November stories deliberately left out, and a sources footer.
 
-## The six stories
+Every story happened, or was first reported, on 20 November 2026 in at least one
+time zone. Sources include Reuters, AP, BBC, Al Jazeera, the New Zealand Herald,
+the Korea JoongAng Daily, the ATP Tour, FIFA, the USGS, the UN, the IMD, the ESA
+and the EORTC.
 
-1. **Kyiv bridges hit overnight** — Russian ballistic missiles damaged three
-   bridges over the Dnipro; Mayor Klitschko reported fires across the capital.
-2. **Asia markets rout** — worst week since 2020; Taiwan fell 16% in a week,
-   its worst since 1991, as the AI trade unwound.
-3. **GTA VI: $2.36bn day** — an estimated 24.6 million copies sold on launch
-   day (Sensor Tower estimate; Take-Two has not confirmed figures).
-4. **Sydney terror charge** — an Australian man charged with terrorism
-   offences on Friday after a police raid in Sydney.
-5. **Boat capsizes off Senegal: 4 dead** — at least 50 people were aboard the
-   migrant boat near Yenne; the search goes on.
-6. **13,000 rally in Tokyo** — crowds outside the National Diet protest
-   plans to revise Japan's pacifist constitution.
+## How it is made
 
-## Run it
+`main.py` is a pure Python 3 standard-library program. It draws the whole page
+itself: its own raster, its own 5x7 bitmap font, and its own PNG encoder. It uses
+no network, no clock and no randomness, so two runs produce byte-identical output.
+
+Run it with:
 
 ```sh
-mkdir -p out && MAKEFUN_OUTPUT_DIR=out python3 main.py
+mkdir -p out
+MAKEFUN_OUTPUT_DIR=out python3 main.py
 ```
+
+The image is written to `$MAKEFUN_OUTPUT_DIR/entry.png` (1024x1024 PNG).
